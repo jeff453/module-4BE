@@ -1,7 +1,9 @@
 <?php
+// set the variables of ID and password
 $uid = filter_var($_POST['userid'], FILTER_DEFAULT);
 $pw = filter_var($_POST['password'], FILTER_DEFAULT);
 
+// The next command line is to make sure that the user is enrolled
 if($uid == 'jeff' and $pw == 'jeff453') {
     session_start();
     $_SESSION['sid']=session_id();
